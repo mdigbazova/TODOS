@@ -14,8 +14,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path, include
+
+from rest_framework_swagger.views import get_swagger_view
+
+schema_view = get_swagger_view(title='Pastebin API')
 
 urlpatterns = [
+    path('schema/', schema_view),
     path('admin/', admin.site.urls),
+    path('rest-auth/', include('rest_auth.urls')),  # Authentications
+    path('api/v1/todos/', include('todos.urls')),
+    re_path('^', include('django.contrib.auth.urls')),
+    # because Django rest reset works with Django authentication urls
+    path('api-auth/', include('rest_framework.urls')),  # Permissions, adding a login view to the browsable API
 ]

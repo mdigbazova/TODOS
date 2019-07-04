@@ -78,7 +78,7 @@ class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     phone_number = PhoneNumberField(blank=True, null=True, unique=True)
     profession = models.CharField(max_length=80, blank=True, null=True)
-    location = models.CharField(max_length=30, blank=True)
+    location = models.CharField(max_length=100, blank=True)
 
 
     # we are hooking the create_user_profile and save_user_profile methods to the User model,
@@ -96,7 +96,7 @@ class Profile(models.Model):
         user = User.objects.get(pk=user_id)
         user.profile.phone_number = request.phone_number
         user.profile.profession = request.profession
-        user.profile.photo = request.photo
+        user.profile.location = request.location
         user.save()
 
     def __str__(self):
