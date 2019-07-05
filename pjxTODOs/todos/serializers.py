@@ -7,11 +7,11 @@ from . models import Profile, Todo
 
 # relationships between entities -> to use hyperlinks
 class TodoSerializer(serializers.ModelSerializer):
-    title = serializers.HyperlinkedRelatedField(many=True, view_name='todos:todo-detail', read_only=True)
+    url = serializers.HyperlinkedRelatedField( view_name='todos:todo-detail', read_only=True, format='html')
 
     class Meta:
         model = Todo
-        fields = ('url', 'id', 'title', 'created_date', 'end_date', 'description', 'state', 'language', 'code', 'owner')
+        fields = ('url', 'id', 'title', 'end_date', 'description', 'state', 'language', 'code', 'owner')
 
 
 class TodoCreateSerializer(serializers.ModelSerializer):
@@ -21,11 +21,11 @@ class TodoCreateSerializer(serializers.ModelSerializer):
     point to any attribute on the serialized instance.
     """
 
-    title = serializers.HyperlinkedRelatedField(many=True, view_name='todos:todo-detail', read_only=True)
+    url = serializers.HyperlinkedRelatedField(view_name='todos:todo-detail', read_only=True, format='html')
 
     class Meta:
         model = Todo
-        fields = ('title', 'created_date', 'end_date', 'description', 'state', 'language', 'code', 'owner') #
+        fields = ('url', 'id', 'title', 'end_date', 'description', 'state', 'language', 'code', 'owner') #
 
     """
     To automatically associate the logged-in user with created todo - by overriding 
@@ -34,7 +34,15 @@ class TodoCreateSerializer(serializers.ModelSerializer):
     def create(self, validated_data): #return ExampleModel.objects.create(**validated_data)
         #import pdb; pdb.set_trace()
         validated_data['owner'] = self.context['request'].user
-        return super(TodoCreateSerializer, self).create(validated_data)
+        validated_data['title'] = self.data['title']
+        validated_data['end_date'] = self.data['end_date']
+        validated_data['description'] = self.data['description']
+        validated_data['state'] = self.data['state']
+        validated_data['language'] = self.data['language']
+        validated_data['code'] = self.data['code']
+
+        #return super(TodoCreateSerializer, self).create(validated_data)
+        return serializers.ModelSerializer(**validated_data)
 
 
 

@@ -20,7 +20,7 @@ STATE_CHOICES = (
     (4, 'NON-APPLICABLE'),
     (5, 'FAILED'),
     (6, 'FIXED'),
-    (7, 'DONE!'),
+    (7, 'DONE!')
 )
 
 LEXERS = [item for item in get_all_lexers() if item[1]]
