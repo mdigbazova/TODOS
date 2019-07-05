@@ -9,7 +9,7 @@ import pygments
 from pygments import highlight # for highlighted code
 from pygments.formatters.html import HtmlFormatter # for HTML representation of code
 from pygments.lexers import get_all_lexers, get_lexer_by_name
-from pygments.styles import get_all_styles
+#from pygments.styles import get_all_styles
 from multiselectfield import MultiSelectField
 
 # Create your models here.
@@ -24,7 +24,7 @@ STATE_CHOICES = (
 
 LEXERS = [item for item in get_all_lexers() if item[1]]
 LANGUAGE_CHOICES = sorted([(item[1][0], item[0]) for item in LEXERS])
-STYLE_CHOICES = sorted((item, item) for item in get_all_styles())
+#STYLE_CHOICES = sorted((item, item) for item in get_all_styles())
 
 
 class Todo(models.Model):
@@ -32,11 +32,11 @@ class Todo(models.Model):
     description = models.TextField(blank=True)
     created_date = models.DateField(auto_now=True)
     state = MultiSelectField(choices=STATE_CHOICES, default=1)
-    end_date = models.DateField(null=True, blank=True) # auto_now=True, 
+    end_date = models.DateField(null=True, blank=True) # auto_now=True,
     language = models.CharField(choices=LANGUAGE_CHOICES, default='python', max_length=100)
     code = models.TextField(null=True, blank=True)
     #linenos = models.BooleanField(default=True)
-    style = models.CharField(choices=STYLE_CHOICES, default='solarized-light', max_length=100)
+    #style = models.CharField(choices=STYLE_CHOICES, default='solarized-light', max_length=100)
     owner = models.ForeignKey('auth.User', related_name='todos', on_delete=models.CASCADE, null=True) # related_name creates a reverse relationship default=User
     #highlighted = models.TextField(blank=True, default='')
 

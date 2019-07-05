@@ -2,16 +2,16 @@ from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
 from django.contrib.auth.models import User
 
-from . models import Profile, Todo, LANGUAGE_CHOICES, STYLE_CHOICES, STATE_CHOICES
+from . models import Profile, Todo
 
 
 # relationships between entities -> to use hyperlinks
 class TodoSerializer(serializers.ModelSerializer):
-    highlight = serializers.HyperlinkedIdentityField(view_name='todo-detail', format='html')#
+    title = serializers.HyperlinkedIdentityField(view_name='todo-detail', format='html')#
 
     class Meta:
         model = Todo
-        fields = ('url', 'id', 'title', 'created_date', 'end_date', 'description', 'state', 'language', 'code', 'linenos', 'style', 'highlight', 'owner') #
+        fields = ('url', 'id', 'title', 'created_date', 'end_date', 'description', 'state', 'language', 'code', 'owner') #
         #read_only_fields = ('highlighted',) -> done in admin.py
 
 
@@ -23,11 +23,11 @@ class TodoCreateSerializer(serializers.ModelSerializer):
     point to any attribute on the serialized instance.
     """
 
-    highlight = serializers.HyperlinkedIdentityField(view_name='todo-detail', format='html')#
+    title = serializers.HyperlinkedIdentityField(view_name='todo-detail', format='html')#
 
     class Meta:
         model = Todo
-        fields = ('title', 'created_date', 'end_date', 'description', 'state', 'language', 'code', 'style', 'owner') #
+        fields = ('title', 'created_date', 'end_date', 'description', 'state', 'language', 'code', 'owner') #
         #read_only_fields = ('highlighted',) -> done in admin.py 'id',
 
     """

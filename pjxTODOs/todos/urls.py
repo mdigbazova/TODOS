@@ -10,12 +10,10 @@ from . import views
 schema_view = get_swagger_view(title='Pastebin API')
 
 urlpatterns = [
-    #url(r'^$', schema_view)
     re_path('^schema/', schema_view),
     re_path('^register/', views.RegisterUser.as_view(), name='register'),  # register functionality
     path('todos_list/', views.TodosList.as_view(), name="todos-list"),
-    path('todo/<pk>/', views.TodosDetail.as_view(), name="todos-detail"),
-    path('todo/<pk>/highlight/', views.TodoDetail.as_view(), name='todo-detail'),
+    path('todo/<pk>/', views.TodosDetail.as_view(), name="todo-detail"),
     path('users/', views.UserList.as_view(), name="user-list"),
     path('user/<pk>/', views.UserDetail.as_view(), name="user-detail"),
     path('', views.api_root),
