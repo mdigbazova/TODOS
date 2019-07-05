@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21fb75c8-4d92-4125-a6d8-a0e8fb8934bf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pjxTODOs/TODOs/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/pjxTODOs/TODOs/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pjxTODOs/TODOs/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pjxTODOs/TODOs/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pjxTODOs/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/pjxTODOs/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pjxTODOs/todos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/pjxTODOs/todos/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pjxTODOs/todos/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/pjxTODOs/todos/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pjxTODOs/todos/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/pjxTODOs/todos/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pjxTODOs/todos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pjxTODOs/todos/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,15 +18,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pjxTODOs/TODOs/views.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pjxTODOs/todos/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="607">
-              <caret line="93" selection-start-line="93" selection-start-column="2" selection-end-line="93" selection-end-column="39" />
-              <caret line="92" selection-start-line="92" selection-start-column="2" selection-end-line="92" selection-end-column="35" />
-              <caret line="91" selection-start-line="91" selection-start-column="2" selection-end-line="91" selection-end-column="39" />
+            <state relative-caret-position="480">
+              <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pjxTODOs/todos/permissions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pjxTODOs/todos/serializers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="528">
+              <caret line="27" column="109" selection-start-line="27" selection-start-column="109" selection-end-line="27" selection-end-column="109" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pjxTODOs/todos/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#46#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -36,13 +72,25 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>todos_profile</find>
+      <find>_profile</find>
+      <find>photo</find>
+      <find>profile</find>
+      <find>FIXME add more tags here</find>
+      <find>linenos</find>
+      <find>style</find>
+      <find>highli</find>
+      <find>todo-detail</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pjxTODOs/pjxTODOs/settings.py" />
         <option value="$PROJECT_DIR$/pjxTODOs/TODOs/metho_serializer_views.py" />
         <option value="$PROJECT_DIR$/pjxTODOs/TODOs/method_serializer_view.py" />
         <option value="$PROJECT_DIR$/pjxTODOs/TODOs/permissions.py" />
@@ -51,14 +99,21 @@
         <option value="$PROJECT_DIR$/pjxTODOs/TODOs/serializers.py" />
         <option value="$PROJECT_DIR$/pjxTODOs/TODOs/urls.py" />
         <option value="$PROJECT_DIR$/pjxTODOs/TODOs/views.py" />
+        <option value="$PROJECT_DIR$/pjxTODOs/pjxTODOs/urls.py" />
+        <option value="$PROJECT_DIR$/pjxTODOs/pjxTODOs/settings.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/pjxTODOs/todos/models.py" />
+        <option value="$PROJECT_DIR$/pjxTODOs/todos/admin.py" />
+        <option value="$PROJECT_DIR$/pjxTODOs/todos/views.py" />
+        <option value="$PROJECT_DIR$/pjxTODOs/todos/urls.py" />
+        <option value="$PROJECT_DIR$/pjxTODOs/todos/serializers.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="887" />
-    <option name="y" value="5" />
-    <option name="width" value="1037" />
-    <option name="height" value="1034" />
+    <option name="x" value="583" />
+    <option name="width" value="1292" />
+    <option name="height" value="1044" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -87,7 +142,7 @@
               <item name="TODOs" type="b2602c69:ProjectViewProjectNode" />
               <item name="TODOs" type="462c0819:PsiDirectoryNode" />
               <item name="pjxTODOs" type="462c0819:PsiDirectoryNode" />
-              <item name="TODOs" type="462c0819:PsiDirectoryNode" />
+              <item name="todos" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -98,7 +153,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pjxTODOs" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Mariya.Digbazova\PycharmProjects\TODOs\pjxTODOs" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -126,14 +187,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="887" y="5" width="1037" height="1034" extended-state="0" />
+    <frame x="583" y="0" width="1292" height="1044" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1879397" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1496" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32979977" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32954547" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -149,85 +210,107 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
+    <entry file="file://$PROJECT_DIR$/pjxTODOs/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/pjxTODOs/pjxTODOs/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1176">
-          <caret line="49" column="28" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
+        <state relative-caret-position="332">
+          <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pjxTODOs/TODOs/admin.py">
+    <entry file="file://$PROJECT_DIR$/Lib/site-packages/pygments/formatters/html.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="38" lean-forward="true" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="286">
+          <caret line="57" column="3" selection-start-line="57" selection-start-column="3" selection-end-line="57" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pjxTODOs/TODOs/method_serializer_view.py">
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pjxTODOs/todos/method_serializer_view.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
           <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pjxTODOs/TODOs/apps.py">
+    <entry file="file://$PROJECT_DIR$/pjxTODOs/todos/permissions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pjxTODOs/TODOs/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="104" column="53" selection-start-line="104" selection-start-column="53" selection-end-line="104" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pjxTODOs/TODOs/permissions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
+        <state relative-caret-position="456">
           <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pjxTODOs/TODOs/serializers.py">
+    <entry file="file://$PROJECT_DIR$/pjxTODOs/todos/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="100" column="54" selection-start-line="100" selection-start-column="54" selection-end-line="100" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pjxTODOs/TODOs/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="14" column="99" selection-start-line="14" selection-start-column="99" selection-end-line="14" selection-end-column="99" />
+        <state relative-caret-position="408">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pjxTODOs/TODOs/views.py">
+    <entry file="file://$PROJECT_DIR$/pjxTODOs/pjxTODOs/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="93" selection-start-line="93" selection-start-column="2" selection-end-line="93" selection-end-column="39" />
-          <caret line="92" selection-start-line="92" selection-start-column="2" selection-end-line="92" selection-end-column="35" />
-          <caret line="91" selection-start-line="91" selection-start-column="2" selection-end-line="91" selection-end-column="39" />
+        <state relative-caret-position="24">
+          <caret line="3" column="59" selection-start-line="3" selection-start-column="59" selection-end-line="3" selection-end-column="59" />
+          <folding>
+            <element signature="e#632#664#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pjxTODOs/todos/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pjxTODOs/todos/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pjxTODOs/todos/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pjxTODOs/todos/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pjxTODOs/todos/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="27" column="109" selection-start-line="27" selection-start-column="109" selection-end-line="27" selection-end-column="109" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>

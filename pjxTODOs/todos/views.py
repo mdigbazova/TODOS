@@ -109,7 +109,7 @@ class TodoDetail(generics.GenericAPIView):#TodoHighlight
 
     def get(self, request, *args, **kwargs):
         todo = self.get_object ()
-        return Response(todo.highlighted)
+        return Response(todo.title)
 
 
 """

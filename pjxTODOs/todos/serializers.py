@@ -7,13 +7,11 @@ from . models import Profile, Todo
 
 # relationships between entities -> to use hyperlinks
 class TodoSerializer(serializers.ModelSerializer):
-    title = serializers.HyperlinkedIdentityField(view_name='todo-detail', format='html')#
+    title = serializers.HyperlinkedRelatedField(many=True, view_name='todos:todo-detail', read_only=True)
 
     class Meta:
         model = Todo
-        fields = ('url', 'id', 'title', 'created_date', 'end_date', 'description', 'state', 'language', 'code', 'owner') #
-        #read_only_fields = ('highlighted',) -> done in admin.py
-
+        fields = ('url', 'id', 'title', 'created_date', 'end_date', 'description', 'state', 'language', 'code', 'owner')
 
 
 class TodoCreateSerializer(serializers.ModelSerializer):
@@ -23,12 +21,11 @@ class TodoCreateSerializer(serializers.ModelSerializer):
     point to any attribute on the serialized instance.
     """
 
-    title = serializers.HyperlinkedIdentityField(view_name='todo-detail', format='html')#
+    title = serializers.HyperlinkedRelatedField(many=True, view_name='todos:todo-detail', read_only=True)
 
     class Meta:
         model = Todo
         fields = ('title', 'created_date', 'end_date', 'description', 'state', 'language', 'code', 'owner') #
-        #read_only_fields = ('highlighted',) -> done in admin.py 'id',
 
     """
     To automatically associate the logged-in user with created todo - by overriding 
@@ -36,7 +33,6 @@ class TodoCreateSerializer(serializers.ModelSerializer):
     """
     def create(self, validated_data): #return ExampleModel.objects.create(**validated_data)
         #import pdb; pdb.set_trace()
-        #validated_data['state'] = self.data['state']
         validated_data['owner'] = self.context['request'].user
         return super(TodoCreateSerializer, self).create(validated_data)
 
