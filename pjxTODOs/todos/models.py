@@ -32,7 +32,7 @@ class Todo(models.Model):
     description = models.TextField(blank=True)
     created_date = models.DateField(auto_now=True)
     state = MultiSelectField(choices=STATE_CHOICES, default=1)
-    end_date = models.DateField(null=True) # auto_now=True, , blank=True
+    end_date = models.DateField(null=True, blank=True) # auto_now=True, 
     language = models.CharField(choices=LANGUAGE_CHOICES, default='python', max_length=100)
     code = models.TextField(null=True, blank=True)
     #linenos = models.BooleanField(default=True)
@@ -58,11 +58,11 @@ class Todo(models.Model):
         Use the `pygments` library to create a highlighted HTML
         representation of the code snippet.
         """
-        lexer = get_lexer_by_name (self.language)
-        linenos = 'table' if self.linenos else False
-        options = {'title': self.title} if self.title else {}
-        formatter = HtmlFormatter (style=self.style, full=True, **options)
-        self.highlighted = highlight (self.code, lexer, formatter)
+        # lexer = get_lexer_by_name (self.language)
+        # linenos = 'table' if self.linenos else False
+        # options = {'title': self.title} if self.title else {}
+        # formatter = HtmlFormatter (style=self.style, full=True, **options)
+        # self.highlighted = highlight (self.code, lexer, formatter)
         super(Todo, self).save(*args, **kwargs)
 
 
