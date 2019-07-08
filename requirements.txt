@@ -12,3 +12,4 @@ six==1.12.0
 sqlparse==0.3.0
 django-multiselectfield==0.1.8
 django-rest-swagger==2.2.0
+django-filters

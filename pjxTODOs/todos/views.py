@@ -8,11 +8,15 @@ from rest_framework.decorators import api_view
 from rest_framework.reverse import reverse
 from rest_framework import generics
 from rest_framework import permissions, renderers
+import django_filters.rest_framework
+from rest_framework import filters
 
 from . models import Profile, Todo
 from . serializers import UserSerializer, UserCreateSerializer, ProfileSerializer, TodoSerializer, TodoCreateSerializer
 from . permissions import IsOwnerOrReadOnly
 from . method_serializer_view import MethodSerializerView
+
+from . filters import TodoFilter
 
 # Create your views here.
 
@@ -112,6 +116,20 @@ class TodoDetail(generics.GenericAPIView):#TodoHighlight
         return Response(todo.title)
 
 
+#--------------------------
+
+class FilterView(generics.ListAPIView):
+    queryset = Todo.objects.all()
+    serializer_class = TodoSerializer
+    filter_backends = (filters.SearchFilter, filters.OrderingFilter)
+    search_fields = ('title', 'description', 'language')
+    ordering_fields = ('title', 'description')
+
+
+#--------------------------
+
+
+
 """
 To have a single entry point to the API - Root API Endpoint
 """
@@ -119,10 +137,6 @@ To have a single entry point to the API - Root API Endpoint
 def api_root(request, format=None):
     return Response({
         'users': reverse('user-list', request=request, format=format),
-        'todos': reverse('todos-list', request=request, format=format)
+        'todos': reverse('todos-list', request=request, format=format),
+        'search': reverse('searcher', request=request, format=format),
     })
-
-
-#--------------------------
-
-#--------------------------
