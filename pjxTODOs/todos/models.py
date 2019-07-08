@@ -39,6 +39,7 @@ class Todo(models.Model):
     #linenos = models.BooleanField(default=True)
     #style = models.CharField(choices=STYLE_CHOICES, default='solarized-light', max_length=100)
     owner = models.ForeignKey('auth.User', related_name='todos', on_delete=models.CASCADE, null=True) # related_name creates a reverse relationship default=User
+    url = models.TextField(blank=True, default='')
     #highlighted = models.TextField(blank=True, default='')
 
     """

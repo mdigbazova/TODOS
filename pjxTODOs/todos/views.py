@@ -94,9 +94,6 @@ class UserList(APIView):
 To add two new read-only views for a list of all users and a detail view of individual users.
 I use the generic class-based RetrieveAPIView for the read-only detail view.
 """
-# class UserList(generics.ListAPIView):
-#     queryset = User.objects.all()
-#     serializer_class = UserSerializer
 
 
 class UserDetail(generics.RetrieveAPIView):
@@ -113,7 +110,7 @@ class TodoDetail(generics.GenericAPIView):#TodoHighlight
 
     def get(self, request, *args, **kwargs):
         todo = self.get_object ()
-        return Response(todo.title)
+        return Response(todo.code) #title
 
 
 #--------------------------
