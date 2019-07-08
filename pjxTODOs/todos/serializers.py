@@ -14,18 +14,24 @@ class TodoSerializer(serializers.ModelSerializer):
         fields = ('url', 'id', 'title', 'end_date', 'description', 'state', 'language', 'code', 'owner')
 
 
+
 class TodoCreateSerializer(serializers.ModelSerializer):
-    owner = serializers.ReadOnlyField(source='owner.username')
+    #owner = serializers.ReadOnlyField(source='owner.username')
     """
     The source argument used here controls which attribute is used to populate a field and can 
     point to any attribute on the serialized instance.
     """
 
     url = serializers.HyperlinkedRelatedField(view_name='todos:todo-detail', read_only=True, format='html')
+    created_date = serializers.DateField(read_only=True)
+    id = serializers.CharField(read_only=True)
+    owner = serializers.IntegerField(read_only=True, source='owner.user_id')
+    state = serializers.CharField(read_only=True)
+
 
     class Meta:
         model = Todo
-        fields = ('url', 'id', 'title', 'end_date', 'description', 'state', 'language', 'code', 'owner') #
+        fields = ('url', 'id', 'title', 'created_date', 'end_date', 'description', 'state', 'language', 'code', 'owner') #
 
     """
     To automatically associate the logged-in user with created todo - by overriding 
@@ -34,15 +40,12 @@ class TodoCreateSerializer(serializers.ModelSerializer):
     def create(self, validated_data): #return ExampleModel.objects.create(**validated_data)
         #import pdb; pdb.set_trace()
         validated_data['owner'] = self.context['request'].user
-        validated_data['title'] = self.data['title']
-        validated_data['end_date'] = self.data['end_date']
-        validated_data['description'] = self.data['description']
-        validated_data['state'] = self.data['state']
-        validated_data['language'] = self.data['language']
-        validated_data['code'] = self.data['code']
+        return super(TodoCreateSerializer, self).create(validated_data)
 
-        #return super(TodoCreateSerializer, self).create(validated_data)
-        return serializers.ModelSerializer(**validated_data)
+
+    def save(self, *args, **kwargs):
+        return super(TodoCreateSerializer, self).save(*args, **kwargs)  #
+
 
 
 

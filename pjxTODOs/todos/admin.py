@@ -5,8 +5,8 @@ from . models import Todo, Profile
 # Register your models here.
 
 
-#class TodoAdmin(admin.ModelAdmin):
-    # readonly_fields = ('highlighted',)
+class TodoAdmin(admin.ModelAdmin):
+    readonly_fields = ('created_date',)
 
 
 admin.site.register(Todo)

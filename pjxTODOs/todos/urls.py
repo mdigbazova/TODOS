@@ -14,7 +14,7 @@ urlpatterns = [
     re_path('^register/', views.RegisterUser.as_view(), name='register'),  # register functionality
     re_path('^todos_list/$', views.TodosList.as_view(), name="todos-list"),
     re_path('^todo/(?P<pk>\d+)/$', views.TodosDetail.as_view(), name="todos-detail"),
-    re_path('^todo/(?P<pk>\d+)/title/$', views.TodoDetail.as_view(), name='todo-detail'),
+    #re_path('^todo/(?P<pk>\d+)/title/$', views.TodoDetail.as_view(), name='todo-detail'),
     re_path('^users/$', views.UserList.as_view(), name="user-list"),
     re_path('^user/(?P<pk>\d+)/$', views.UserDetail.as_view(), name="user-detail"),
     path('', views.api_root),
